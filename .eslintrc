@@ -1,0 +1,25 @@
+{
+    "parser": "@typescript-eslint/parser",
+    "extends": [
+        "plugin:@typescript-eslint/recommended",
+        "prettier"
+    ],
+    "plugins": ["prettier"],
+    "parserOptions": {
+        "ecmaVersion": 2018,
+        "sourceType": "module"
+    },
+    "rules": {
+        "prettier/prettier": "error",
+        "padding-line-between-statements": [
+            "error",
+            { "blankLine": "never", "prev": "*", "next": "*"},
+            { "blankLine": "always", "prev": "*", "next": "block-like" },
+            { "blankLine": "always", "prev": "block-like", "next": "*" },
+            { "blankLine": "always", "prev": "*", "next": "function" },
+            { "blankLine": "always", "prev": "function", "next": "*" },
+            { "blankLine": "always", "prev": "*", "next": "if" },
+            { "blankLine": "always", "prev": "if", "next": "*" }
+        ]
+    }
+}
